@@ -19,8 +19,8 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 
 /* ══ HERO VIDEO ══ */
 .hero{position:relative;height:100vh;min-height:600px;overflow:hidden;display:flex;flex-direction:column}
-.hero-video-wrap{position:absolute;inset:0;z-index:0}
-.hero-video-wrap video{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.hero-video-wrap{position:absolute;inset:0;z-index:0;overflow:hidden}
+
 .hero-video-wrap::after{content:'';position:absolute;inset:0;background:
   linear-gradient(to bottom,rgba(5,5,5,.6) 0%,rgba(5,5,5,.05) 30%,rgba(5,5,5,.05) 55%,rgba(5,5,5,.8) 85%,rgba(5,5,5,.99) 100%),
   linear-gradient(to right,rgba(5,5,5,.35) 0%,transparent 40%,transparent 60%,rgba(5,5,5,.35) 100%)}
@@ -119,7 +119,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 
 /* contact */
 #contacto{background:var(--deep);border-top:1px solid var(--border)}
-.contact-wrap{max-width:1280px;margin:0 auto;padding:100px 48px;display:grid;grid-template-columns:1fr 1.2fr;gap:100px;align-items:start}
+.contact-wrap{max-width:1280px;margin:0 auto;padding:100px 48px;display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:60px;align-items:start}
 .contact-desc{font-size:14px;font-weight:300;color:var(--off);line-height:1.9;margin-bottom:48px}
 .contact-channels{display:flex;flex-direction:column;border-top:1px solid var(--border)}
 .channel{display:flex;align-items:center;gap:20px;padding:18px 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--white);transition:padding-left .25s}
@@ -194,7 +194,7 @@ footer{background:var(--black);border-top:1px solid var(--border)}
   .manifesto-quote,.manifesto-pills{padding:36px 44px}
   .service-row{grid-template-columns:60px 1fr 60px;gap:20px}.srv-tags{display:none}
   .posts-grid{grid-template-columns:1fr}.post-card{border-right:none;border-bottom:1px solid var(--border)}
-  .contact-wrap{grid-template-columns:1fr;gap:60px}.form-box{position:static}
+  .contact-wrap{grid-template-columns:1fr;gap:48px}.form-box{position:static}
   .footer-top{grid-template-columns:1fr;gap:40px}
   .work-masonry{columns:2}
   .topbar-nav{display:none}
@@ -217,8 +217,15 @@ footer{background:var(--black);border-top:1px solid var(--border)}
 <!-- ══ HERO VIDEO ══ -->
 <header class="hero" id="inicio">
   <div class="hero-video-wrap">
-    <video autoplay muted loop playsinline preload="auto">
-      <source src="xxxxUntitledProject-1080.mp4" type="video/mp4">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover"
+    >
+      <source src="https://okfscrew-media.mario-25d.workers.dev/hf_20260211_181148_15df9eea-501a-4755-ab2f-1065a62183e2.mp4" type="video/mp4">
     </video>
   </div>
 
@@ -619,6 +626,24 @@ footer{background:var(--black);border-top:1px solid var(--border)}
 <!-- ══ CONTACTO ══ -->
 <section id="contacto">
   <div class="contact-wrap">
+    <!-- YouTube Short -->
+    <div class="rev" style="transition-delay:.0s">
+      <div style="position:relative;width:100%;max-width:340px;margin:0 auto">
+        <div style="font-family:var(--bc);font-size:9px;font-weight:700;letter-spacing:0.5em;color:var(--red-bright);text-transform:uppercase;margin-bottom:12px">▶ OKFS EN ACCIÓN</div>
+        <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;background:var(--card);border:1px solid var(--border)">
+          <iframe
+            src="https://www.youtube.com/embed/dkgpEMS3-oQ?autoplay=0&loop=1&playlist=dkgpEMS3-oQ&controls=1&rel=0&modestbranding=1"
+            title="OKFS Crew"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%"
+          ></iframe>
+        </div>
+        <div style="margin-top:12px;font-family:var(--bc);font-size:10px;font-weight:400;letter-spacing:0.3em;color:var(--muted);text-transform:uppercase">@okfs_crew · YouTube Shorts</div>
+      </div>
+    </div>
+
     <div class="contact-left rev">
       <p class="s-label">Hablemos</p>
       <h2 class="s-title" style="font-size:clamp(56px,9vw,118px)">TU<br>MURO<br><span>OKFSCREW</span></h2>
